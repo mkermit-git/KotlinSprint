@@ -1,6 +1,6 @@
 package org.example.lesson_2
 
-fun main(){
+fun main() {
     val crystalAmount = 7
     val ironAmount = 11
     val buff = 0.2f
