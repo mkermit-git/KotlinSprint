@@ -1,14 +1,10 @@
 package org.example.lesson_2
 
-fun main(){
-    val englishScorePupil1: Byte = 3
-    val englishScorePupil2: Byte = 4
-    val englishScorePupil3: Byte = 3
-    val englishScorePupil4: Byte = 5
+fun main() {
+    val englishScores = arrayOf(3, 4, 3, 5)
+    val numberOfPupils = englishScores.size
+    val averageScore = englishScores.sum() / numberOfPupils.toFloat()
 
-    val englishScoreAverage: Float =
-        (englishScorePupil1 + englishScorePupil2 + englishScorePupil3 + englishScorePupil4)/4f
-
-    val formattedScore = String.format("%.2f", englishScoreAverage)
+    val formattedScore = String.format("%.2f", averageScore)
     println(formattedScore)
 }
