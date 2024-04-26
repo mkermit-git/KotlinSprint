@@ -17,7 +17,12 @@ fun main() {
         Да, вперед, пожалуйста, вводите свои данные...
     """.trimIndent()
 
-    println(welcomeMessage)
+    // Выводим каждую строку и ожидаем ввода
+    for (line in welcomeMessage.lines()) {
+        print(line)
+        userInput.nextLine() // Ожидание ввода любой клавиши
+    }
+
     print("\nЛогин: ")
     val userLogin = userInput.nextLine()
     if (userLogin == AUTHORISED_LOGIN) {
@@ -34,7 +39,15 @@ fun main() {
                 Надеюсь, вам понравится пребывание здесь больше, чем мне.
             """.trimIndent()
         }
-        println("\n$authMessage")
+
+        println()
+
+        // Выводим каждую строку и ожидаем ввода
+        for (line in authMessage.lines()) {
+            print(line)
+            userInput.nextLine() // Ожидание ввода любой клавиши
+        }
+
     } else {
         println("\nТакого пользователя нет. Желаете зарегистирироваться?")
     }
